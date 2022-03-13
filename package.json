@@ -1,6 +1,6 @@
 {
-    "name": "@Hexa-AI/node-red-contrib-hexa-data-connector",
-    "version": "1.0.0",
+    "name": "@hexa-ai/node-red-contrib-hexa-data-connector",
+    "version": "1.0.1",
     "description": "MQTT Adapter for Hexa-data",
     "main": "hd-up.js",
     "scripts": {
@@ -12,9 +12,10 @@
     },
     "keywords": [
         "MQTT",
-        "Hexa-data"
+        "Hexa-data",
+        "node-red"
     ],
-    "author": "JTalbourdet",
+    "author": "jtalbourdet",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/Hexa-ai/node-red-contrib-hexa-data-connector/issues"
