@@ -22,6 +22,7 @@
     },
     "homepage": "https://github.com/Hexa-ai/node-red-contrib-hexa-data-connector#readme",
     "node-red": {
+        "version": ">=2.0.0",
         "nodes": {
             "hd-up": "hd-up.js"
         }
