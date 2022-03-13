@@ -1,5 +1,5 @@
 {
-    "name": "node-red-contrib-hexa-data-connector",
+    "name": "@Hexa-AI/node-red-contrib-hexa-data-connector",
     "version": "1.0.0",
     "description": "MQTT Adapter for Hexa-data",
     "main": "hd-up.js",
