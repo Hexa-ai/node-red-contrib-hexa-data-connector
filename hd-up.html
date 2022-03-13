@@ -3,8 +3,7 @@
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            name: {value:""},
-            publishInterval: {value:5}
+            name: {value:""}
         },
         inputs:1,
         outputs:1,
@@ -27,17 +26,11 @@
         <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
         <input type="text" id="node-input-name" placeholder="Name">
     </div>
-    <div class="form-row">
-        <label for="node-input-publishInterval"><i class="fa fa-tag"></i> Publish interval</label>
-        <input type="text" id="node-input-publishInterval" placeholder="Publish interval">
-    </div>
-
-    
 </script>
 
 <script type="text/html" data-help-name="hd-up">
     <p>Node to format MQTT messages intended to be uploaded to Hexa-data software from Hexa-AI (www.hexa-ai.fr)
-        This node buffers the values and timestamps and publishes the values at the defined interval. If there is no interval set, the default is 5 seconds
+        This node buffers the values and timestamps and publish is done if msg.publish is true
     </p>
 
     <h3>Inputs</h3>
@@ -47,6 +40,11 @@
         </dt>
         <dd> Contains the value to be returned as well as its description (name, value  and data type) 
             Payload Ex:<code>{name:"testMsg","value":12.3,"type":"real"}</code>
+        </dd>
+        <dt>publish
+            <span class="property-type">Boolean </span>
+        </dt>
+        <dd> Publish the buffured messages if true
         </dd>
     </dl>
 

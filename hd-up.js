@@ -3,12 +3,12 @@ module.exports = function (RED) {
         RED.nodes.createNode(this, config);
         this.publishInterval=config.publishInterval
         var node = this;
-        var intervalStarted = false;
-        var id = setInterval(()=>sendBuffer(node),node.publishInterval*1000);
-        console.log(node.publishInterval)
         node.on('input', function (msg) {
-            
-            addToBuffer(msg.payload);
+            if (msg.publish===true){
+                sendBuffer(node)
+            } else {
+                addToBuffer(msg.payload);
+            }   
         });
     }
     RED.nodes.registerType("hd-up", HdUp);
