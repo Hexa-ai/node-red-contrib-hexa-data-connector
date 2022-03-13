@@ -1,0 +1,28 @@
+{
+    "name": "node-red-contrib-hexa-data-connector",
+    "version": "1.0.0",
+    "description": "MQTT Adapter for Hexa-data",
+    "main": "hd-up.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Hexa-ai/node-red-contrib-hexa-data-connector.git"
+    },
+    "keywords": [
+        "MQTT",
+        "Hexa-data"
+    ],
+    "author": "JTalbourdet",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/Hexa-ai/node-red-contrib-hexa-data-connector/issues"
+    },
+    "homepage": "https://github.com/Hexa-ai/node-red-contrib-hexa-data-connector#readme",
+    "node-red": {
+        "nodes": {
+            "hd-up": "hd-up.js"
+        }
+    }
+}
