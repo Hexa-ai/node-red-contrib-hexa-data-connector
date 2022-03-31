@@ -1,7 +1,6 @@
 module.exports = function (RED) {
     function HdUp(config) {
         RED.nodes.createNode(this, config);
-        this.publishInterval=config.publishInterval
         var node = this;
         node.on('input', function (msg) {
             if (msg.publish===true){
@@ -32,18 +31,18 @@ function addToBuffer(payload) {
         id=gtsNames.length-1
     }
     if (payload.type=='boolean') {
-        var data = [Number(id), Date.now()*1000,Boolean(payload.value)]
+        var data = [Number(id), typeof(payload.ts)==='undefined' ? Date.now()*1000 :payload.ts ,Boolean(payload.value)]
     } else if(payload.type=='integer') {
-        var data = [Number(id), Date.now()*1000,Number(payload.value)]
+        var data = [Number(id), typeof(payload.ts)==='undefined' ? Date.now()*1000 :payload.ts ,Number(payload.value)]
     } else if(payload.type=='real') {
         if (payload.value % 1 === 0) {
-            var data = [Number(id), Date.now()*1000,Number(payload.value)+0.1]
+            var data = [Number(id), typeof(payload.ts)==='undefined' ? Date.now()*1000 :payload.ts ,Number(payload.value)+0.001]
         } else {
-            var data = [Number(id), Date.now()*1000,Number(payload.value)]
+            var data = [Number(id), typeof(payload.ts)==='undefined' ? Date.now()*1000 :payload.ts ,Number(payload.value)]
         }
             
     } else if(payload.type=='string') {
-        var data = [Number(id), Date.now()*1000,String(payload.value)]
+        var data = [Number(id), typeof(payload.ts)==='undefined' ? Date.now()*1000 :payload.ts ,String(payload.value)]
     }
     
     datas.push(data)

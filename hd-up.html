@@ -39,7 +39,7 @@
             <span class="property-type">Object </span>
         </dt>
         <dd> Contains the value to be returned as well as its description (name, value  and data type) 
-            Payload Ex:<code>{name:"testMsg","value":12.3,"type":"real"}</code>
+            Payload Ex:<code>{name:"testMsg","ts": 1648757607214682,"value":12.3,"type":"real"}</code>
         </dd>
         <dt>publish
             <span class="property-type">Boolean </span>
@@ -50,9 +50,9 @@
 
     <h3>Details</h3>
     <p><code>msg.payload.name</code> Is a string containing the variable name declared in hexa-data</p>
+    <p><code>msg.payload.ts</code> Is a number containing the timestamp in µSec (if it is not provided it will be generated automatically)</p>
     <p><code>msg.payload.value</code> Is the value to publish on hexa-data</p>
     <p><code>msg.payload.type</code> Describes the type of value to publish ("boolean", "integer", "real", "string")
-    One thing remains to be improved on the hexa-data side, for reals if there are no decimal places, this node automatically adds 0.1 to the value
     </p>
 
     <h3>References</h3>
